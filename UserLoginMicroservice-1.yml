@@ -1,0 +1,26 @@
+# Conversion to YAML from Properties formar report
+# Warnings:
+# - The yaml file had comments which are lost in the refactoring!
+spring:
+  application:
+    name: UserLoginMicroservice-1
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+  config:
+    import: optional:configserver:http://localhost:7070
+  datasource:
+    url: jdbc:mysql://localhost:3306/Aug15
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '"*"'
+server:
+  port: 8081

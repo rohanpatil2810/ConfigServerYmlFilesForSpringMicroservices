@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: UserMsgMicroservice-1
+  config:
+    import: optional:configserver:http://localhost:7070
+  boot:
+    admin:
+      client:
+        url: http://localhost:9090
+server:
+  port: 8082
+msg: Rohan
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '"*"'
