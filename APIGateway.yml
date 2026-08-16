@@ -11,26 +11,25 @@ spring:
     gateway:
       server:
         routes:
-
             # ==========================
             # LOGIN MICROSERVICE
             # ==========================
-            - id: user-login-service
-              uri: lb://UserLoginMicroservice-1
-              predicates:
-                - Path=/auth/**
-              filters:
-                - StripPrefix=1
+          - id: user-login-service
+            uri: lb://UserLoginMicroservice-1
+            predicates:
+              - Path=/auth/**
+            filters:
+              - StripPrefix=1
 
             # ==========================
             # MESSAGE MICROSERVICE
             # ==========================
-            - id: user-msg-service
-              uri: lb://UserMsgMicroservice-1
-              predicates:
-                - Path=/msg/**
-              filters:
-                - StripPrefix=1
+          - id: user-msg-service
+            uri: lb://UserMsgMicroservice-1
+            predicates:
+              - Path=/msg/**
+            filters:
+              - StripPrefix=1
 
 server:
   port: 8080
