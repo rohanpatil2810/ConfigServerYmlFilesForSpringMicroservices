@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ConfigClientEurekaClient2
+  config:
+    import: optional:configserver:http://localhost:7070
+server:
+  port: 8084
