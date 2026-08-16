@@ -1,10 +1,4 @@
 spring:
-  application:
-    name: UserMsgMicroservice-1
-
-  config:
-    import: optional:configserver:http://localhost:7070
-
   boot:
     admin:
       client:
