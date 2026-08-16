@@ -1,6 +1,1 @@
-spring:
-  application:
-    name: ConfigClientForTesting
-  config:
-    import: optional:configserver:http://localhost:7070
 getMsg: Welcome_From_Config_Server
